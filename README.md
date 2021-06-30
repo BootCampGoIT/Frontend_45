@@ -5,6 +5,7 @@
     - <thead></thead> - заголовок таблицы
     - <tr></tr> - table row (строки)
     - <th></th> - table header cell ()
+     - <td></td> - table data cell (ячейки)
 
     - <tbody></tbody> - тело таблицы
     - <tr></tr> - table row (строки)
