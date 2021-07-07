@@ -1,0 +1,81 @@
+:root {
+  --brand-color: #3f51b5;
+}
+
+/* img {
+  width: 150px;
+  height: 150px;
+} */
+
+/* .page-logo {
+    width: 150px;
+    height: 150px;
+} */
+
+/* #page-logo {
+    width: 150px;
+    height: 150px; 
+} */
+
+/* li:hover {
+  background-color: cornflowerblue;
+} */
+
+li[data-item="page"]:hover {
+  background-color: var(--brand-color);
+}
+
+/* li a[href$="html"]:focus {
+  color: green;
+} */
+/* li a[href^="./pages"]:focus {
+  color: green;
+} */
+/* li a[href*="pages"]:focus {
+  color: green;
+} */
+
+/* .page-description-marked {
+  color: red;
+} */
+
+.page-description-marked:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.page-description-marked:hover {
+  color: red;
+}
+
+input:focus {
+  background-color: red;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.parent {
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  color: #ff0000;
+  width: 500px;
+  height: 500px;
+}
+
+/* 0011 */
+.parent span {
+  color: green;
+}
+/* 0010 */
+.child {
+  color: blue;
+}
+
+/* 0100 */
+#spec {
+  color: cornsilk;
+}
