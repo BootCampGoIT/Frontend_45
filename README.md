@@ -1,64 +1,45 @@
 # Frontend_45
 
-# Lesson 4 "Оформление текста"
+# Lesson 5 "Блочная модель"
 
-## part 1 "Оформление текста"
+## part 1 "Блочная модель"
 
-        - Свойство text-decoration
+        - Свойства width и height
+        - Свойство box-sizing
+                -- Значение content-box
+                -- Значение border-box
+                -- Глобальный border-box
 
-                text-decoration: none | underline | line-through | overline
+        - Нормализация стилей (https://github.com/sindresorhus/modern-normalize)
+## part 2 "Геометрия элемента"
+        - Свойство padding
+        - Свойство margin
+        - Схлопывание вертикальных отступов
+        - Свойство border
+        - Индивидуальные рамки
+        - Закруглённая рамка
+## part 3 "Типы элементов"
+        - Блочные элементы (block-level)
+                -- Фиксированная ширина
+                -- Горизонтальное центрирование блочных элементов
+                -- Элемент-контейнер
 
-        - Свойство text-transform
+        - Строчные элементы (inline)
+                -- Зазор у строчных элементов
+                -- Особенности вертикальных полей и рамок
+        
+        - Строчно-блочные элементы (inline-block)
+## part 4 "Структурные псевдоклассы"
+        - Псевдоклассы :first-child и :last-child
+        - Псевдокласс :not(selector)
+        - Псевдокласс :nth-child(an+b)
+                -- N-й элемент
+                -- Чётные и нечётные элементы
+                -- От N-го элемента
+                -- Каждый N-й элемент
+                
+        - Дополнительные псевдоклассы
+                
 
-                text-transform: none | uppercase | lowercase | capitalize
 
-        - Свойство text-align
-
-                text-align: left | right | center | justify
-
-        - Свойство text-indent
-
-                text-indent: значение | проценты | inherit
-
-        - Свойство line-height
-
-                line-height: множитель | значение | проценты | normal | inherit
-
-        - Свойство letter-spacing
-
-                letter-spacing: значение | normal | inherit
-
-        - Свойство word-spacing
-
-                word-spacing: значение | normal | inherit
-
-        - Свойство text-shadow
-
-                text-shadow: <смещение по x>, <смещение по y>, <радиус размытия>, <цвет>
-
-        - Свойство white-space
-
-                white-space: normal | nowrap | pre | pre-wrap
-
-## part 2 "Свойства шрифта"
-
-        - Свойство font-size
-
-        - Свойство font-weight
-
-        - Свойство font-style
-
-        - Свойство font-family
-
-## part 3 "Псевдоэлементы текста"
-
-        - Псевдоэлемент ::first-letter
-
-        (!по отношении к тексту ссылки)
-
-        - Псевдоэлемент ::selection
-
-## part 4 "Нестандартные шрифты"
-
-        - Сервис Google Fonts
 
