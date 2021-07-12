@@ -1,53 +1,106 @@
-* {
-  padding: 0;
-  margin: 0;
+html {
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-  font-family: "IBM Plex Serif", serif;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-list-link {
-  text-decoration: none;
-  display: inline-block;
-}
-.nav-list-link::first-letter {
-  /* color: red; */
-}
-
-.paragraph {
-  text-align: justify;
-  text-indent: 25px;
-  width: 500px;
-  line-height: 1.25;
-  font-weight: 700;
-  /* letter-spacing: 2px; */
-  /* word-spacing: 5px; */
-  /* white-space: pre; */
+.card {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 14px;
+  padding: 10px;
 }
 
-.paragraph::first-letter {
-  color: red;
-  font-size: 30px;
-  font-weight: 900;
+.card-title {
+  margin: 0;
+  text-align: center;
+}
+.card-image {
+  display: block;
+  margin: 20px auto 0;
 }
 
-.paragraph::selection {
-  background-color: #3f51b5;
+.description {
+  margin: 20px 0 0;
 }
 
-.decoration {
-  /* word-spacing: 5px; */
-  color: cornflowerblue;
-  font-style: initial;
-  /* word-spacing: -15px */
+.buttons-group {
+  /* background-color: red; */
+  margin-top: 20px;
+  /* outline: 1px solid red; */
+  text-align: center;
+  font-size: 0;
 }
 
-.section-header {
-  text-shadow: -2px -2px 2px red, -3px -3px 3px blue;
+.btn {
+  width: 120px;
+  background-color: cornflowerblue;
+  border: none;
+  height: 24px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn:first-child {
+  border-right: 1px solid white;
+  border-radius: 14px 0 0 14px;
+}
+
+.btn:nth-child(2) {
+  border-radius: 0 14px 14px 0;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: darkolivegreen;
+}
+
+.colors-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.colors-items {
+  width: 14px;
+  height: 14px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.colors-items:not(:last-child) {
+  margin-right: 10px;
+}
+
+.colors-items:nth-child(1) {
+  background-color: red;
+}
+.colors-items:nth-child(2) {
+  background-color: green;
+}
+.colors-items:nth-child(3) {
+  background-color: blue;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+
+.cards-item {
+  width: 25%;
+  padding: 5px;
+  outline: 1px solid red;
 }
