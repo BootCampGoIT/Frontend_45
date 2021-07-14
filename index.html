@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 4</title>
+    <title>Lesson 6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap"
       rel="stylesheet"
@@ -12,48 +16,39 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- <header>
+    <header>
       <a href="https://github.com/" class="logo"
         ><img
-          src="data:image/png;base64,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"
+          src="https://goit.ua/wp-content/themes/2/images/Layer.png.pagespeed.ce.M0kU4lrZ_P.png"
           alt="GitHub logotype"
           width="40"
-          class="img-log" /></a
-      ><input type="text" class="search" />
+          class="img-log"
+      /></a>
       <nav>
         <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="#" class="nav-list-link">Pull requests</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link">home</a>
           </li>
-          <li class="nav-list-item">
-            <a href="#" class="nav-list-link">Issues</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link">about</a>
           </li>
-          <li class="nav-list-item">
-            <a href="#" class="nav-list-link">Marketplace</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link">products</a>
           </li>
-          <li class="nav-list-item">
-            <a href="#" class="nav-list-link">Explore</a>
+          <li class="nav-item">
+            <a href="#" class="nav-link">register</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">logout</a>
           </li>
         </ul>
       </nav>
-    </header> -->
+    </header>
 
     <main>
-      <!-- <div class="content">
-        <div class="first"></div>
-        <div class="second"></div>
-      </div>
-
-      <div class="circle">
-        <div class="innerCircle">
-        
-        </div>
-      </div> -->
-
-      <!-- <div class="contentBox">
-        <div class="innerBox"></div>
-        <div class="innerBox"></div>
-      </div> -->
       <ul class="cards">
         <li class="cards-item">
           <div class="card">
@@ -65,12 +60,46 @@
               width="200"
             />
 
-            <p class="description">
+            <p class="card-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
               quidem repellat numquam id alias laboriosam nesciunt expedita nisi
               qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
               repellendus praesentium voluptates nihil magnam iusto suscipit,
               illum distinctio soluta deserunt ipsam voluptate?
+            </p>
+
+            <div class="card-colors">
+              <h3 class="colors-title">Colors</h3>
+              <ul class="colors-list">
+                <li class="colors-item"></li>
+                <li class="colors-item"></li>
+                <li class="colors-item"></li>
+              </ul>
+            </div>
+            <div class="buttons-group">
+              <button class="btn">Details</button>
+              <button class="btn">Add to cart</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards-item">
+          <div class="card">
+            <h2 class="card-title">Ноутбук Asus ROG Strix</h2>
+            <img
+              class="card-image"
+              src="https://content1.rozetka.com.ua/goods/images/big/180782890.jpg"
+              alt="laptop"
+              width="200"
+            />
+
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit in
+              asperiores sapiente minus doloribus a officiis corrupti totam
+              maiores, cum fuga consequatur voluptate, labore ipsa perspiciatis
+              veniam, sed quo unde ipsam iusto quod quaerat. Aspernatur, dolor
+              id laboriosam, sapiente porro ipsa laudantium assumenda aut
+              repellat animi nulla cupiditate autem modi?
             </p>
 
             <div class="colors">
@@ -89,277 +118,19 @@
         </li>
         <li class="cards-item">
           <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
+            <h2 class="card-title">Ноутбук HP Laptop</h2>
             <img
               class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
+              src="https://content1.rozetka.com.ua/goods/images/big/143038923.jpg"
               alt="laptop"
               width="200"
             />
 
             <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
-            </p>
-
-            <div class="colors">
-              <h3>Colors</h3>
-              <ul class="colors-list">
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-                <li class="colors-items"></li>
-              </ul>
-            </div>
-            <div class="buttons-group">
-              <button class="btn">Details</button>
-              <button class="btn">Add to cart</button>
-            </div>
-          </div>
-        </li>
-
-        <li class="cards-item">
-          <div class="card">
-            <h2 class="card-title">Ноутбук Acer Aspire 5</h2>
-            <img
-              class="card-image"
-              src="https://content2.rozetka.com.ua/goods/images/big_tile/37871275.jpg"
-              alt="laptop"
-              width="200"
-            />
-
-            <p class="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              quidem repellat numquam id alias laboriosam nesciunt expedita nisi
-              qui fugiat? Repudiandae, explicabo, fuga expedita quae facere nam
-              repellendus praesentium voluptates nihil magnam iusto suscipit,
-              illum distinctio soluta deserunt ipsam voluptate?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo,
+              odit. Explicabo ducimus quasi culpa consectetur iure totam,
+              similique expedita voluptatum quisquam mollitia et illum ullam
+              sequi impedit quia! Consequatur, perferendis!
             </p>
 
             <div class="colors">
