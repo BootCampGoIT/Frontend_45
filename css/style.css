@@ -6,6 +6,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 :root {
@@ -27,4 +33,151 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+/* 
+.container {
+  display: flex;
+  width: 1000px;
+  outline: 1px solid black;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.element1 {
+  background-color: red;
+  flex-grow: 1;
+}
+.element2 {
+  background-color: green;
+  flex-grow: 1;
+}
+.element3 {
+  background-color: yellow;
+  flex-grow: 2;
+}
+.element4 {
+  background-color: blue;
+  flex-grow: 3;
+}
+
+.size {
+
+  height: 100px;
+} */
+
+.page-header {
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--main);
+  height: 60px;
+}
+
+.wrapper {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--main);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--active);
+}
+
+.nav-item:last-child {
+  display: none;
+}
+
+/* ------------------ card ---------------------- */
+.cards {
+  outline: 1px solid black;
+}
+
+.cards-item {
+  width: 300px;
+  border: 1px solid var(--secondary);
+  border-radius: 14px;
+  padding: 10px;
+  height: 500px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  /* justify-content: center; */
+}
+
+.card-title {
+  margin-top: 10px;
+}
+
+.card-image {
+  margin-top: 10px;
+}
+
+.card-description {
+  margin-top: 10px;
+ 
+}
+
+.card-colors {
+  margin-top: 10px;
+  display: flex;
+  /* align-items: center; */
+  /* flex-grow: 2; */
+  align-self: flex-start;
+  flex-grow: 1;
+}
+
+.colors-item {
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--main);
+  border-radius: 6px;
+  /* margin-left: 10px; */
+}
+
+.colors-title {
+  margin-right: 10px;
+}
+
+.colors-list {
+  display: flex;
+}
+.colors-item:not(:last-child) {
+  margin-right: 10px;
+} 
+
+.color1 {
+  background-color: red;
+}
+.color2 {
+  background-color: green;
+}
+.color3 {
+  background-color: blue;
+}
+
+.buttons-group {
+  margin-top: 10px;
 }
